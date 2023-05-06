@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+  <div class="login_background">
+        <div class="fullform_area">
+            <div class="description">
+                <h1>Welcome!</h1> 
+                {{ user.username }}
+                <p>Already have an account?</p>
+            </div>
+            {% if not request.user.is_authenticated %}
+            <div class="logform">
+                <div class="signinform_area">
+                    <div class="signinform">
+                        <form class="signin" method="POST">
+                            {% csrf_token %}
+                        {% if error %}
+                        <p style="color: red;">{{ error }}</p>
+                        {% endif %}
+                            <div class="input_block">
+                                <label for="username" class="input_label">Email or Username</label>
+                                <input id="username" class="login_input username" type="text" name="username"  spellcheck="false" placeholder="Username">
+                            </div>
+                            <div class="input_block">
+                                <label for="password" class="input_label">Password</label>
+                                <input id="password" class="login_input password" type="password" name="password" placeholder="Password">
+                            </div>
+                            <div class="input_block">
+                                <input id="check" type="checkbox" name="keeplogindata" value="keep" checked>
+                                <label for="check" class="checkbox_label">Keep me Signed in</label>
+                            </div>
+                            <div class="input_block">
+                                <input type="submit" name="commit" value="Sign in">{% csrf_token %}
+                               
+                                <input type="reset">
+                            </div>
+                        </form>
+                    </div>
+                    {% else %}
+                    <p>your already logged in</p> <button><a href="{% url 'logout' %}">logout</button></a>
+                {% endif %}
+                </div> <!-- signinform -->
+                <div class="line_area">
+                    <div class="line">
+                        <p>Or</p>
+                    </div>
+                </div>
+                <div class="othersignin_area">
+                    <div class="other_signin">
+                        <div class="facebook_signin">
+                            <a href="#">
+                                <i class="fa fa-facebook"></i>
+                                Continue With Facebook
+                            </a>
+                        </div>
+                        <div class="apple_signin">
+                            <a href="#">
+                                <i class="fa fa-apple"></i>
+                                Continue With Apple
+                            </a>
+                        </div>
+                        <div class="google_signin">
+                            <a href="{% url 'social:begin' 'google-oauth2' %}?next={{ request.path }}" class="btn btn-google">Login with Google</a>
+
+                                <i class="fa fa-google"></i>
+                                Continue With Google
+                            </a>
+                        </div> 
+                    </div>
+                </div>
+                <div class="signuplink_area">
+                    <div class="signup_link">
+                        <p class="CreateAccLink">
+                            Don't have an account?
+                            <a href="{% url 'signup' %}" target="_self">Sign up now</a>
+                        </p>
+                    </div>
+                </div>
+            </div> <!-- logform -->
+        </div> <!-- fullform_area -->
+    </div> <!-- login_background -->
+    {% endblock content %}
+</div>
