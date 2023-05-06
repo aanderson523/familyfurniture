@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+{% if form.errors %}
+
+<p>There was an error with you signing up</p>
+
+{% endif %}
+<div class="login_background">
+    <div class="signinform_area">
+        <div class="logform">
+            <form action="{% url 'signup' %}" method="POST">
+                {% csrf_token %}
+
+                {{ form }}
+                <div>
+                    <label for="fist_name">Fist name</label>
+                    <input type="text" id="fist_name" name="name" placeholder="Fist name">
+                    <label for="last_name">Last name</label>
+                    <input type="text" id="last_name" name="name" placeholder="Last name">
+                </div>
+                <div>
+                    <label for="e_mail">email</label>
+                    <input type="email" id="e_mail" name="email" placeholder="example@gmail.com">
+                </div>
+                <div>
+                    <label for="password_f">Password</label>
+                    <input type="password" id="password_f" name="password" placeholder="Password">
+                </div>
+                <div>
+                    <label for="password_c">Confirm Password</label>
+                    <input type="password" id="password_c" name="password" placeholder="Confirm Password">
+                </div>
+                <div>
+                    <input type="checkbox" id="cb_tp" name="checkbox" value="accept" checked>
+                    <label for="cb_tp">I accept the Terms of Use & Privacy Policy</label>
+                </div>
+                <div>
+                    <input type="submit" value="Submit">
+                    <input type="reset">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
