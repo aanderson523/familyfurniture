@@ -1,0 +1,263 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<h3>Hello {{ user.username }}</h3>
+<div class="head-body container">
+    <div class="head-body content">
+        <h1 class="head-title">
+            Welcome to Family Furniture and Mattress
+        </h1>
+    
+      
+        <a href="{% url 'home' %}">
+    
+        <a href="http://awfco.com/catalog/">
+        <button type="button" class="btn">
+            Shop now
+        </button>
+        </a>
+    </div>
+    <div class="head-body-img">
+        <img src="{% static 'store/images/Logo.png' %}" alt="header image" height="500">
+        
+    </div>
+</div>
+</header>
+<!--end of header-->
+
+<!-- trending product-->
+<section class="trend">
+<div class="container">
+    <div class="title">
+        <h4>Trending now</h4>
+        <h2>Best selling products</h2>
+    </div>
+</div>
+<!--item-->
+    <div class="trend-grid">
+        <div class="trend-item">
+            <img src="{% static 'store/images/Sectional.jpeg' %}" alt="Best Product"> 
+            <div class="trend-item-content">
+                <h4>Sectional Sofa </h4>
+                <h4>Call for Avalibility</h4>
+                <div class="stars">
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star-half"></i></span>
+                </div>
+                <span class="cheveron-icon">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </span>
+            </div>
+            </div>
+    
+        <!--end of item-->
+        <!--item-->
+        <div class="trend-item">
+            <img src="{% static 'store/images/Mattress.jpeg' %}" alt="Best Product"> 
+            <div class="trend-item-content">
+                <h4>Beauty Rest Pillowtop Mattress</h4>
+                <h4>Call for Avalibility</h4>
+                <div class="stars">
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star-half"></i></span>
+                </div>
+                <span class="cheveron-icon">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </span>
+            </div>
+        </div>
+        <!--end of item-->
+        <!--item-->
+        <div class="trend-item">
+            <img src="{% static 'store/images/Bed1.jpeg' %}" alt="Best Product"> 
+            <div class="trend-item-content">
+                <h4>Modern Elegant Bed Frame </h4>
+                <h4>Call for Avalibility</h4>
+                <div class="stars">
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star-half"></i></span>
+                </div>
+                <span class="cheveron-icon">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </span>
+            </div>
+        </div>
+        <!--end of item-->
+
+        <div class="trend-item">
+            <img src="{% static 'store/images/Lamp.jpeg' %}" alt="Best Product" width="600"> 
+            <div class="trend-item-content">
+                <h4>Stylish Lamp </h4>
+                <h4>Call for Avalibility</h4>
+                <div class="stars">
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star"></i></span>
+                    <span><i class="fa-solid fa-star-half"></i></span>
+                </div>
+                <span class="cheveron-icon">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </span>
+            </div>
+    </div>
+</div>
+</section>
+<!--end of trending product-->
+
+<div class="underline"></div>
+
+<!--featured product-->
+<section class="featured">
+<div class="container">
+<!--item-->
+<div class="featured-item">
+<div class="featured-item-img">
+    <img src="{% static 'store/images/Chair.jpeg' %}" alt="chair">
+</div>
+<div class="featured-item-content">
+    <div class="title">
+        <h4>Featured Products</h4>
+        <h2>Midnight Recliner</h2>
+    <p class="item-price">Call For Avalibility</p>
+    </div>
+    <p class="text">
+        Kick back and Relax your new comfortable
+        recliner
+    </p>
+    <div class="featuredbtns">
+        <a href="http://awfco.com/catalog/"></a>
+        <button type="button" class="btn">Browse</button>
+        <button type="button" class="btn">Purchase</button>
+    </div>
+    </div>
+    </div>
+</div>
+
+<!--end of item-->
+<!--item-->
+<div class="featured-item">
+<div class="featured-item-img">
+    <img src="{% static 'store/images/table.jpeg' %}" alt="dinning">
+</div>
+<div class="featured-item-content">
+    <div class="title">
+        <h4>Featured Products</h4>
+        <h2>Black & Cherry Dinning Set</h2>
+    <p class="item-price">Call For Avalibility</p>
+    </div>
+    <p class="text">
+        Kick back and Relax your new comfortable
+        recliner.
+    </p>
+    <div class="featuredbtns">
+        <button type="button" class="btn">Browse</button>
+        <button type="button" class="btn">Purchase</button>
+    </div>
+</div>
+</div>
+
+<!--end of item-->
+<!--item-->
+<div class="featured-item">
+<div class="featured-item-img">
+    <img src="{% static 'store/images/loveSeat.jpeg' %}" alt="chair">
+</div>
+<div class="featured-item-content">
+    <div class="title">
+        <h4>Featured Products</h4>
+        <h2>Indigo Blue Love Seat & Chair</h2>
+    <p class="item-price">Call For Avalibility</p>
+    </div>
+    <p class="text">
+        Have a well desevered Seat on this Lavish
+        Indigo Blue Love Seat or Chair. 
+    </p>
+    <div class="featuredbtns">
+    
+        <button type="button" class="btn"><a href="http://awfco.com/catalog/"></a></button>
+        <button type="button" class="btn">Purchase</button>
+    </div>
+</div>
+</div>
+
+<!--end of item-->
+<!--reviews-->
+<div class="container">
+<div class="title">
+    <h4>Weekly Update</h4>
+    <h2>latest Update</h2>
+</div>
+
+<div class="bloggrid">
+    <!--item-->
+    <div class="blog">
+        <div class="blog-item-img">
+        <img src="{% static 'store/images/famMattress.png' %}" alt="logo">
+        </div>
+        <div class="blog-item-content">
+            <a href="#">Creative Decoration Ideas 
+            </a>
+            <div>
+                <span>January 20 |Design| Furniture</span>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!--end of reviews-->
+<!--item-->
+<div class="blog">
+<div class="blog-item-img">
+<img src="{% static 'store/images/storeFront.JPG' %}" alt="building" width="500" height="400">
+</div>
+<div class="blog-item-content">
+    <a href="#"> We welcome you in with open arms. 
+    </a>
+    <div>
+        <span>January 30 |Design| Furniture</span>
+    </div>
+    </div>
+<!--end of reviews-->
+<!--item-->
+
+<!--end of reviews-->
+
+<!--newsletter-->
+<section class="newsletter">
+<div class="container">
+    <div class="newsletter-content">
+        <div class="title">
+            <h4>Subscribe to our newsletter</h4>
+            <h2>Newsletter</h2>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Enter your email address">
+                <button type="submit" class="subscribe-btn">
+                    subscribe
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </form>
+
+        <div class="circle-box circle-1"></div>
+        <div class="circle-box circle-2"></div>
+    </div>
+</div>
+</section>
+</div>
+</section>
+
+{% endblock content %}
